@@ -1,0 +1,8 @@
+# current project
+tmp
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+nbproject

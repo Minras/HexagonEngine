@@ -62,7 +62,7 @@ HT.Hexagon = function(id, x, y)
         this.Points.push(new HT.Point(x, y1 + y));
     }
 
-    this.Id = id;
+    this.id = id;
 
     this.x = x;
     this.y = y;
@@ -80,14 +80,13 @@ HT.Hexagon = function(id, x, y)
 
 HT.Hexagon.prototype.drawDebugText = function(ctx)
 {
-    if(this.Id) {
+    if(this.id) {
         //draw text for debugging
         ctx.fillStyle = "black"
         ctx.font = "bolder 8pt Trebuchet MS,Tahoma,Verdana,Arial,sans-serif";
         ctx.textAlign = "center";
         ctx.textBaseline = 'middle';
-        //var textWidth = ctx.measureText(this.Planet.BoundingHex.Id);
-        ctx.fillText(this.Id, this.MidPoint.X, this.MidPoint.Y);
+        ctx.fillText(this.id, this.MidPoint.X, this.MidPoint.Y);
     }
 
     if(this.PathCoOrdX !== null && this.PathCoOrdY !== null && typeof(this.PathCoOrdX) != "undefined" && typeof(this.PathCoOrdY) != "undefined") {
@@ -96,7 +95,6 @@ HT.Hexagon.prototype.drawDebugText = function(ctx)
         ctx.font = "bolder 8pt Trebuchet MS,Tahoma,Verdana,Arial,sans-serif";
         ctx.textAlign = "center";
         ctx.textBaseline = 'middle';
-        //var textWidth = ctx.measureText(this.Planet.BoundingHex.Id);
         ctx.fillText("("+this.PathCoOrdX+","+this.PathCoOrdY+")", this.MidPoint.X, this.MidPoint.Y + 10);
     }
 
@@ -115,7 +113,6 @@ HT.Hexagon.prototype.drawDebugText = function(ctx)
         ctx.font = "bolder 8pt Trebuchet MS,Tahoma,Verdana,Arial,sans-serif";
         ctx.textAlign = "left";
         ctx.textBaseline = 'middle';
-        //var textWidth = ctx.measureText(this.Planet.BoundingHex.Id);
         ctx.fillText("z", this.x + this.x1/2 - 8, this.y + this.y1/2);
         ctx.fillText("x", this.x + this.x1/2, this.P1.Y + 10);
         ctx.fillText("y", this.P1.X + 2, this.y + this.y1/2);

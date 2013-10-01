@@ -128,7 +128,7 @@ HT.Grid.prototype.GetHexDistance = function(/*Hexagon*/ h1, /*Hexagon*/ h2)
  */
 HT.Grid.prototype.GetHexById = function(id) {
     for(var i in this.Hexes) {
-        if(this.Hexes[i].Id == id) {
+        if(this.Hexes[i].id == id) {
             return this.Hexes[i];
         }
     }
